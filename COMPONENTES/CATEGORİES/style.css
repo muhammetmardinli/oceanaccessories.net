@@ -1,0 +1,69 @@
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.category {
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    width: calc(100% / 3 - 20px);
+    /* Her satırda 3 öğe */
+}
+
+.category img {
+    display: block;
+    max-width: 100%;
+    height: 100%;
+}
+
+
+}
+
+.category:hover img {
+    filter: blur(0.5px);
+    border-radius: 10px;
+    width: 100%;
+}
+
+.category:hover .overlay {
+    display: block;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    background: rgba(255, 255, 255, 0.8);
+    display: none;
+    z-index: 1;
+    text-align: center;
+    padding-top: 50%;
+    font-size: 24px;
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 10px;
+
+}
+
+/* Tablet ekranları için her satırda 2 öğe */
+@media only screen and (max-width: 768px) {
+    .category {
+        width: calc(50% - 20px);
+    }
+}
+
+/* Telefon ekranları için her satırda 1 öğe */
+@media only screen and (max-width: 480px) {
+    .category {
+        width: 50%;
+    }
+}
